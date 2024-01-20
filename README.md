@@ -31,5 +31,25 @@ Therefore - and the reason for this project - my initial goal was to produce a s
 Once scraped and filtered, to then send an email to the contact details provided on the register, with my details and explain my idea.
 
 ## Tools / Pre-requisites
+In order to replicate the work conducted here, the following items/ libraries/ tools etc were used:
+### IDE 
+[Visual studio Code](https://code.visualstudio.com/) with the following extensions:
+- python
+- pylance
+- jupyter
+
+### Python
+Including Python 3, the following libraries were used throughout the whole process:
+| Library Name | What it does | Is it useful |
+| Selenium|something |something else |
+- BeautifulSoup
+- tqdm 
+- requests
+- lxml
+- re
+- string
+- plotly
+- datetime
+
 ## Steps Taken 
 ## Reflection 
