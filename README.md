@@ -43,25 +43,13 @@ Including Python 3, the following libraries were used throughout the whole proce
 | Library Name | What it does |
 | ------------ | ------------ |
 | Selenium | something |
-| BeautifulSoup
-| Selenium | something |
-| Selenium | something |
-| Selenium | something |
-| Selenium | something |
-| Selenium | something |
-| Selenium | something |
-| Selenium | something |
-| Selenium | something |
-| Selenium | something |
-| Selenium | something |
-
-- tqdm 
-- requests
-- lxml
-- re
-- string
-- plotly
-- datetime
+| BeautifulSoup | To Parse Through Web/HTML elements |
+| tqdm | To Show loop iteration progress |
+| requests | To perform HTTP calls over the internet |
+| lxml | Advanced parsing of HTML/XML |
+| re | Regex operations |
+| plotly | To display interactive Data visualisations |
+| datetime | for datetime operations |
 
 ## Steps Taken 
 ## Reflection 
