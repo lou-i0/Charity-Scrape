@@ -59,4 +59,11 @@ To proceed further, the following notebooks are done and ran (in order) from dat
 ### Charity Register Web Scrape
 [Link to notebook](https://github.com/lou-i0/Charity-Scrape/blob/main/charity_registerscrape.ipynb)
 
+### Initial Scrape
+The first step is to access the charity register using selenium, in order to bypass the cookies acceptance before continuing to get the total pages to collect high level data from.
+
+From there, we then switch to requests and lxml to first parse through the header level data, before then going into each individual page to retrieve the lower level information for each charity parsed. 
+
+
+
 ## Reflection 
