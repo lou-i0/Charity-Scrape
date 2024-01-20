@@ -40,12 +40,8 @@ In order to replicate the work conducted here, the following items/ libraries/ t
 
 ### Python
 Including Python 3, the following libraries were used throughout the whole process:
-
-| Library | What it does |
-| --- | --- |
-| 'Selenium' | something here |
-
-- Selenium
+| Library Name | What it does | Is it useful |
+| Selenium|something |something else |
 - BeautifulSoup
 - tqdm 
 - requests
