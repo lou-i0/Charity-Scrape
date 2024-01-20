@@ -42,14 +42,21 @@ In order to replicate the work conducted here, the following items/ libraries/ t
 Including Python 3, the following libraries were used throughout the whole process:
 | Library Name | What it does |
 | ------------ | ------------ |
-| Selenium | something |
+| Selenium | Automation of web browser steps |
 | BeautifulSoup | To Parse Through Web/HTML elements |
 | tqdm | To Show loop iteration progress |
 | requests | To perform HTTP calls over the internet |
 | lxml | Advanced parsing of HTML/XML |
 | re | Regex operations |
 | plotly | To display interactive Data visualisations |
-| datetime | for datetime operations |
+| datetime | Datetime operations |
 
 ## Steps Taken 
+Steps involved so far are relatively straightforward, but some steps can take a little while. So, I attempted to section the code in the notebook 'charity_registerscrape.ipynb' to accommodate for this.
+
+To proceed further, the following notebooks are done and ran (in order) from data scrape to sending an email out to selected Charities:
+
+### Charity Register Web Scrape
+[Link to notebook](https://github.com/lou-i0/Charity-Scrape/blob/main/charity_registerscrape.ipynb)
+
 ## Reflection 
