@@ -41,9 +41,20 @@ In order to replicate the work conducted here, the following items/ libraries/ t
 ### Python
 Including Python 3, the following libraries were used throughout the whole process:
 | Library Name | What it does |
-| --- | --- |
-| Selenium| 'something' |
-- BeautifulSoup
+| ------------ | ------------ |
+| Selenium | something |
+| BeautifulSoup
+| Selenium | something |
+| Selenium | something |
+| Selenium | something |
+| Selenium | something |
+| Selenium | something |
+| Selenium | something |
+| Selenium | something |
+| Selenium | something |
+| Selenium | something |
+| Selenium | something |
+
 - tqdm 
 - requests
 - lxml
