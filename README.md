@@ -50,6 +50,11 @@ Including Python 3, the following libraries were used throughout the whole proce
 | re | Regex operations |
 | plotly | To display interactive Data visualisations |
 | datetime | Datetime operations |
+| pandas | Data analysis and manipulation |
+| os | Operation System operations |
+| pathlib | retrieve path of files |
+| redmail | send out emails via gmail account |
+
 
 ## Steps Taken 
 Steps involved so far are relatively straightforward, but some steps can take a little while. So, I attempted to section the code in the notebook 'charity_registerscrape.ipynb' to accommodate for this.
@@ -59,13 +64,13 @@ To proceed further, the following notebooks are done and ran (in order) from dat
 ### Charity Register Web Scrape
 [Link to notebook](https://github.com/lou-i0/Charity-Scrape/blob/main/charity_registerscrape.ipynb)
 
-### Initial Scrape
+#### Initial Scrape
 The first step is to access the charity register using selenium, in order to bypass the cookies acceptance before continuing to get the total pages to collect high level data from.
 ![Initial Scrape code snippet](scrape1snippet.png)
 
 From there, we then switch to requests and lxml to first parse through the header level data, before then going into each individual page to retrieve the lower level information for each charity parsed. 
 
-### Data Cleaning
+#### Data Cleaning
 Now that the high level charity information as well each of its individual details are collected within the separate links below, we now need to clean up the data we have scraped, which includes:
 - Removing any rows with missing values (for now at least)
 - Removing columns such as index, charity number etc (columns that - for now - are not needed)
@@ -75,7 +80,7 @@ Now that the high level charity information as well each of its individual detai
 
 Now all of the above is complete, save a copy of this dataset down ready for further use. 
 
-### Data Filtering 
+#### Data Filtering 
 For this phase, the goal was to understand which organisation in which to approach. The first round of filtering involves the organisationI felt should not be approached. The reason for this was not from a place or malice or hate, but more to avoid any organisations that could be considered Controversial; such as anything that has a stance or partisan on religion or politics, or need to do something for them in order to get help.
 
 While this can inherently comes with personal bias, I just wanted to focus on charities just with an aim of doing the right thing, simple as that. with this filtering I had to initially manually filter out charities that contained certain words, similar to the screenshot below:
@@ -85,8 +90,46 @@ While this can inherently comes with personal bias, I just wanted to focus on ch
 The second round of filtering involves the column 'what it does'. The charities are all assigned a category in the 'what it does column' like so:
 ![cat filtering ](catfilter.png)
 
-for the first instance, I chosen to record show charities with the 'general charitable purposes' only, with scope to change this and expand on it in future. 
+For the first instance, I chosen to record show charities with the 'general charitable purposes' only, with scope to change this and expand on it in future. 
 
 with all the above now complete, the next and final stage is to use this cleaned and filtered dataset we scraped to send an automated email out to some of these charities (more explained on that later).
 
+### Email Charities from final dataset
+The final set of steps in this exercise is to use the cleaned and filtered dataset scraped from the charity register, to approach via email to pitch them the services we can provide. 
+
+for all the steps in this section, is covered in the following notebook:
+
+[Link to notebook](https://github.com/lou-i0/Charity-Scrape/blob/main/email_automation_script.ipynb)
+
+#### pre-requisites for this notebook
+Before this notebook can be ran successfully, there is a need to obtain an app password to your personal gmail account, to then be used in the python script and send from there. to do this do the following steps:
+
+- Go to your google account 
+- Go to security
+- Search for app password
+- Create a name for your app password and follow the steps.
+- You should then save the password down to be used shortly. 
+
+Secondly , once you have the relevant information you should add to new environment variables onto your local machine for you gmail username and  app password, which can then be past later via the os library in your python code. 
+
+the initial variables as seen in the screenshot, required the use of os and environment variables on you local machine to ensure both use and privacy of not showing sensitive information.'
+
+![variable setting](variable_setting.png)
+
+Finally, we use the redmail library to set up a email to send out to the organisations within the dataset, with the remaining code fairly self-explanatory.
+
+And there we have it!
+
 ## Reflection 
+Some notes to place here based on my experience and what i may change in future:
+
+- Realised that the gmail email sending only functions sucessfully up to  emails before its stops, so had to select up to  charities to approach from the saved dataset, and added code in the initial python script to remove charities that i have already sent emails previously to.
+
+- Did get some some good responses back at the time, but i feel the email structure needs changing as most were only interested in the free work i would offer, rather than a continuing relationship after this point. 
+
+- More of a personal note, learnt alot about what i feel i need to focus on working with going forward, to work for folks doing the right or something important, or ideally both!
+
+- I hope anything of this work proves useful to someone else, but do get in contact if you have any comments, improvement etc.
+
+- Thanks for reading! :)
+
