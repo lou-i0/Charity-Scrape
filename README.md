@@ -61,9 +61,32 @@ To proceed further, the following notebooks are done and ran (in order) from dat
 
 ### Initial Scrape
 The first step is to access the charity register using selenium, in order to bypass the cookies acceptance before continuing to get the total pages to collect high level data from.
+![Initial Scrape code snippet](scrape1snippet.png)
 
 From there, we then switch to requests and lxml to first parse through the header level data, before then going into each individual page to retrieve the lower level information for each charity parsed. 
 
+### Data Cleaning
+Now that the high level charity information as well each of its individual details are collected within the separate links below, we now need to clean up the data we have scraped, which includes:
+- Removing any rows with missing values (for now at least)
+- Removing columns such as index, charity number etc (columns that - for now - are not needed)
+- Tidy up the overview column removing unneeded whitespace.
+- Created or cleaned columns from the data which covers, website, email address, phone number, address
+- Convert all data to lowercase for ease of later work.
 
+Now all of the above is complete, save a copy of this dataset down ready for further use. 
+
+### Data Filtering 
+For this phase, the goal was to understand which organisation in which to approach. The first round of filtering involves the organisationI felt should not be approached. The reason for this was not from a place or malice or hate, but more to avoid any organisations that could be considered Controversial; such as anything that has a stance or partisan on religion or politics, or need to do something for them in order to get help.
+
+While this can inherently comes with personal bias, I just wanted to focus on charities just with an aim of doing the right thing, simple as that. with this filtering I had to initially manually filter out charities that contained certain words, similar to the screenshot below:
+
+![manual filtering](manualfilter.png)
+
+The second round of filtering involves the column 'what it does'. The charities are all assigned a category in the 'what it does column' like so:
+![cat filtering ](catfilter.png)
+
+for the first instance, I chosen to record show charities with the 'general charitable purposes' only, with scope to change this and expand on it in future. 
+
+with all the above now complete, the next and final stage is to use this cleaned and filtered dataset we scraped to send an automated email out to some of these charities (more explained on that later).
 
 ## Reflection 
