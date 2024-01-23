@@ -4,6 +4,9 @@
 ### TL:DR
 Goal of project was to perform a web scrape of all organisations found on the gov.uk charity register ([GOV.uk Charity Register](https://www.gov.uk/find-charity-information)). Then to filter to charities I wish to contact. Finally, send an automated email out to them based on the selected charities. 
 
+Please see simple diagram below of the high-level process:
+![TLDR overview](tldr_overview.png)
+
 ### Long Story Version
 As part of my wish (at the time) to work for good causes, I was initially looking to utilise my skills in Data Analytics, Science, Engineering and Machine Learning for them. However, I wanted to use these skills on a consultancy basis for charities and non-profits that I believed were doing the right thing; in other words to "help people, who help people".  
 
